@@ -8,6 +8,7 @@ import {
   ShieldCheck,
   UserRound
 } from "lucide-react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { type FormEvent, useState } from "react";
 
@@ -245,6 +246,11 @@ export function LoginForm() {
                   required={mode === "patient"}
                 />
               </div>
+              <div className="text-right">
+                <Link href="/forgot-password" className="text-sm text-teal-700 hover:text-teal-800 font-medium">
+                  Forgot password?
+                </Link>
+              </div>
             </TabsContent>
 
             <TabsContent value="doctor" className="space-y-5">
@@ -273,6 +279,11 @@ export function LoginForm() {
                   placeholder="Enter your password"
                   required={mode === "doctor"}
                 />
+              </div>
+              <div className="text-right">
+                <Link href="/forgot-password" className="text-sm text-teal-700 hover:text-teal-800 font-medium">
+                  Forgot password?
+                </Link>
               </div>
               <div className="space-y-2">
                 <div className="flex items-center justify-between">

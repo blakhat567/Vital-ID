@@ -93,6 +93,21 @@ The app uses Supabase Auth for user authentication. Users can sign up, log in, a
 
 This application handles sensitive medical information. Ensure compliance with HIPAA, GDPR, or relevant privacy regulations in your jurisdiction. All data access is logged and auditable.
 
+## Backend Implementation
+
+For detailed backend setup instructions, database schema, API endpoints, and deployment guide, see [BACKEND_IMPLEMENTATION.md](BACKEND_IMPLEMENTATION.md).
+
+### Quick Start Backend Setup
+1. Set up Supabase project
+2. Configure database schema and RLS policies
+3. Set environment variables (see [ENV_VARIABLES.md](ENV_VARIABLES.md))
+4. Implement API endpoints
+5. Deploy to production
+
+## Environment Variables
+
+For a complete list of required environment variables and how to obtain them, see [ENV_VARIABLES.md](ENV_VARIABLES.md).
+
 ## Contributing
 
 1. Fork the repository
