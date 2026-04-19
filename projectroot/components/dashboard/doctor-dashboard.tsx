@@ -41,7 +41,7 @@ import {
   DEMO_SESSION_TOKEN,
   createBrowserSupabaseClient
 } from "@/lib/supabase/client";
-import { mockDashboardData } from "@/lib/mock-data";
+//import { mockDashboardData } from "@/lib/mock-data";
 import type { DashboardData } from "@/types";
 
 type AccessMethod = "manual" | "qr";
@@ -326,7 +326,7 @@ export function DoctorDashboard() {
                 <div className="mt-2 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3">
                   <p className="text-[10px] uppercase tracking-wide text-amber-600 mb-2">Allergies</p>
                   <div className="flex flex-wrap gap-1.5">
-                    {p.allergies.map((allergy) => <Badge key={allergy} variant="warning">{allergy}</Badge>)}
+                    {p.allergies?.map((allergy) => <Badge key={allergy} variant="warning">{allergy}</Badge>)}
                   </div>
                 </div>
               </CardContent>
@@ -362,7 +362,7 @@ export function DoctorDashboard() {
                 </div>
               </CardHeader>
               <CardContent className="space-y-2">
-                {p.conditions.map((condition, index) => (
+                {p.conditions?.map((condition, index) => (
                   <div key={`${condition}-${index}`} className="flex items-center gap-3 rounded-xl border border-border/60 bg-slate-50 px-4 py-3">
                     <div className="h-2 w-2 rounded-full bg-rose-400" />
                     <p className="text-sm font-medium text-slate-900">{condition}</p>
